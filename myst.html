@@ -1,0 +1,981 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MyST Markdown &#8212; Das Executable Book Ökosystem</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'myst';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sphinx" href="sphinx.html" />
+    <link rel="prev" title="Jupyter Book" href="jupyterbook.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/mylogo.png" class="logo__image only-light" alt="Das Executable Book Ökosystem - Home"/>
+    <script>document.write(`<img src="_static/mylogo.png" class="logo__image only-dark" alt="Das Executable Book Ökosystem - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Das Executable Book Ökosystem
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="commonmark.html">CommonMark &amp; GitHub-Flavored Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyterbook.html">Jupyter Book</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Demo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmyst.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/myst.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>MyST Markdown</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-myst-markdown">1. Was ist MyST Markdown?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-im-okosystem">2. MyST im Ökosystem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direktiven-block-level-erweiterungen">3. Direktiven: Block-Level-Erweiterungen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hinweisboxen">3.1 Hinweisboxen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abbildungen-mit-beschriftung">3.2 Abbildungen mit Beschriftung</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rollen-inline-erweiterungen">4. Rollen: Inline-Erweiterungen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wichtige-rollen-im-uberblick">Wichtige Rollen im Überblick</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematische-formeln">5. Mathematische Formeln</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-mathematik">5.1 Inline-Mathematik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gleichungsblocke">5.2 Gleichungsblöcke</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nummerierte-gleichung-mit-label">5.3 Nummerierte Gleichung mit Label</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#querverweise-zwischen-seiten">6. Querverweise zwischen Seiten</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verweis-auf-andere-kapitel-dieses-buchs">Verweis auf andere Kapitel dieses Buchs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verweis-auf-ein-label">Verweis auf ein Label</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zitationen">7. Zitationen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frontmatter-metadaten-fur-wissenschaftliche-artikel">8. Frontmatter: Metadaten für wissenschaftliche Artikel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-markdown-vs-github-flavored-markdown-gfm">9. MyST Markdown  vs. GitHub-Flavored Markdown (GFM)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verbindung-zu-anderen-kapiteln">Verbindung zu anderen Kapiteln</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quellen-weiterfuhrende-literatur">Quellen &amp; Weiterführende Literatur</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="myst-markdown">
+<h1>MyST Markdown<a class="headerlink" href="#myst-markdown" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Markedly Structured Text:  Markdown für die Wissenschaft</strong></p>
+<p>MyST erweitert CommonMark um mächtige Werkzeuge für wissenschaftliches
+Publizieren: Direktiven, Rollen, Querverweise, Gleichungen und Zitationen,
+alles in reinem Markdown.</p>
+</div>
+<hr class="docutils" />
+<section id="was-ist-myst-markdown">
+<h2>1. Was ist MyST Markdown?<a class="headerlink" href="#was-ist-myst-markdown" title="Link to this heading">#</a></h2>
+<p>MyST (Markedly Structured Text) ist darauf ausgelegt, publikationsreife
+Dokumente vollständig in Markdown zu erstellen. Die Erweiterungen und das
+Design von MyST sind vom Sphinx- und reStructuredText-Ökosystem inspiriert
+und stellen eine Obermenge von CommonMark dar.</p>
+<p>In Juni 2024 wurde MyST Markdown offiziell Teil von Project Jupyter.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Offizielle Ressourcen</strong></p>
+<ul class="simple">
+<li><p>Dokumentation: <a class="reference external" href="https://mystmd.org/guide">mystmd.org/guide</a></p></li>
+<li><p>Spezifikation: <a class="reference external" href="https://mystmd.org/spec">mystmd.org/spec</a></p></li>
+<li><p>Syntax-Übersicht: <a class="reference external" href="https://mystmd.org/guide/syntax-overview">mystmd.org/guide/syntax-overview</a></p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="myst-im-okosystem">
+<h2>2. MyST im Ökosystem<a class="headerlink" href="#myst-im-okosystem" title="Link to this heading">#</a></h2>
+<p>MyST steht im Zentrum des Executable Book Ökosystems:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ebene</p></th>
+<th class="head"><p>Werkzeug</p></th>
+<th class="head"><p>Rolle</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Syntax</p></td>
+<td><p><strong>CommonMark</strong></p></td>
+<td><p>Basis-Markdown</p></td>
+</tr>
+<tr class="row-odd"><td><p>Erweiterung</p></td>
+<td><p><strong>MyST Markdown</strong></p></td>
+<td><p>Wissenschaftliche Syntax</p></td>
+</tr>
+<tr class="row-even"><td><p>Parser</p></td>
+<td><p><strong>MyST-Parser</strong></p></td>
+<td><p>Übersetzt MyST → Sphinx AST</p></td>
+</tr>
+<tr class="row-odd"><td><p>Build</p></td>
+<td><p><strong>Sphinx</strong></p></td>
+<td><p>Erzeugt HTML, PDF, ePub</p></td>
+</tr>
+<tr class="row-even"><td><p>Publisher</p></td>
+<td><p><strong>Jupyter Book</strong></p></td>
+<td><p>Orchestriert alles</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="direktiven-block-level-erweiterungen">
+<h2>3. Direktiven: Block-Level-Erweiterungen<a class="headerlink" href="#direktiven-block-level-erweiterungen" title="Link to this heading">#</a></h2>
+<p>Direktiven sind Block-Level-Erweiterungspunkte wie Hinweisboxen,
+Tabs, Abbildungen oder eingebettete Charts.</p>
+<p>Die allgemeine Syntax lautet:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{direktiven-name} Argument
+:option: wert
+
+Inhalt der Direktive
+```
+</pre></div>
+</div>
+<section id="hinweisboxen">
+<h3>3.1 Hinweisboxen<a class="headerlink" href="#hinweisboxen" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{note}
+Das ist ein Hinweis.
+<span class="sb">```</span>
+
+<span class="sb">```{warning}</span>
+<span class="sb">Das ist eine Warnung.</span>
+<span class="sb">```</span>
+
+```{tip}
+Das ist ein Tipp.
+```
+</pre></div>
+</div>
+<p>Ergebnis:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Das ist ein Hinweis</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Das ist eine Warnung</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Das ist ein Tipp</p>
+</div>
+<p>Verfügbare Typen und ihre Farben:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Direktive</p></th>
+<th class="head"><p>Farbe</p></th>
+<th class="head"><p>Verwendung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">note</span></code></p></td>
+<td><p>blau</p></td>
+<td><p>Allgemeine Hinweise</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tip</span></code></p></td>
+<td><p>grün</p></td>
+<td><p>Hilfreiche Tipps</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">important</span></code></p></td>
+<td><p>lila</p></td>
+<td><p>Wichtige Information</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">warning</span></code></p></td>
+<td><p>orange</p></td>
+<td><p>Warnungen</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">danger</span></code></p></td>
+<td><p>rot</p></td>
+<td><p>Kritische Warnungen</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">seealso</span></code></p></td>
+<td><p>grau</p></td>
+<td><p>Weiterführende Links</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="abbildungen-mit-beschriftung">
+<h3>3.2 Abbildungen mit Beschriftung<a class="headerlink" href="#abbildungen-mit-beschriftung" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{figure} https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg
+:width: 300px
+:align: center
+:name: linux-logo
+
+Das Linux Logo.
+```
+</pre></div>
+</div>
+<p>Ergebnis:</p>
+<figure class="align-center" id="linux-logo">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg"><img alt="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" style="width: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Das Linux Logo.</span><a class="headerlink" href="#linux-logo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<hr class="docutils" />
+<section id="rollen-inline-erweiterungen">
+<h2>4. Rollen: Inline-Erweiterungen<a class="headerlink" href="#rollen-inline-erweiterungen" title="Link to this heading">#</a></h2>
+<p>Rollen sind Inline-Erweiterungspunkte für Komponenten wie
+Querverweise, externe Referenzen, Zitationen oder Inline-Mathematik.
+Rollen und Direktiven sind zwei der mächtigsten Teile von MyST.
+Sie funktionieren wie Funktionen, aber in einer Auszeichnungssprache.</p>
+<p>Die Syntax lautet: <code class="docutils literal notranslate"><span class="pre">{rollenname}`Inhalt`</span></code></p>
+<section id="wichtige-rollen-im-uberblick">
+<h3>Wichtige Rollen im Überblick<a class="headerlink" href="#wichtige-rollen-im-uberblick" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Rolle</p></th>
+<th class="head"><p>Beispiel</p></th>
+<th class="head"><p>Funktion</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">doc</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{doc}`commonmark`</span></code></p></td>
+<td><p>Link zu einer anderen Seite</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ref</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{ref}`mein-label`</span></code></p></td>
+<td><p>Link zu einem Label</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">eq</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{eq}`meine-gleichung`</span></code></p></td>
+<td><p>Referenz auf Gleichung</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">math</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{math}`E</span> <span class="pre">=</span> <span class="pre">mc^2`</span></code></p></td>
+<td><p>Inline-Mathematik</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">abbr</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{abbr}`MyST</span> <span class="pre">(Markedly</span> <span class="pre">Structured</span> <span class="pre">Text)`</span></code></p></td>
+<td><p>Abkürzung</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="mathematische-formeln">
+<h2>5. Mathematische Formeln<a class="headerlink" href="#mathematische-formeln" title="Link to this heading">#</a></h2>
+<p>Mathematik kann entweder inline oder als Gleichungsblock
+dargestellt werden. Neben der üblichen MyST-Syntax kann auch
+„Dollar-Math” verwendet werden, abgeleitet von LaTeX: Inline-Mathematik
+wird mit einfachen Dollarzeichen umschlossen (<span class="math notranslate nohighlight">\(), Gleichungsblöcke
+mit zwei Dollarzeichen (\)</span>$).</p>
+<section id="inline-mathematik">
+<h3>5.1 Inline-Mathematik<a class="headerlink" href="#inline-mathematik" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Die Formel $E = mc^2$ beschreibt die Masse-Energie-Äquivalenz.
+</pre></div>
+</div>
+<p>Ergebnis: Die Formel <span class="math notranslate nohighlight">\(E = mc^2\)</span> beschreibt die Masse-Energie-Äquivalenz.</p>
+</section>
+<section id="gleichungsblocke">
+<h3>5.2 Gleichungsblöcke<a class="headerlink" href="#gleichungsblocke" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$
+</pre></div>
+</div>
+<p>Ergebnis:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+\]</div>
+</section>
+<section id="nummerierte-gleichung-mit-label">
+<h3>5.3 Nummerierte Gleichung mit Label<a class="headerlink" href="#nummerierte-gleichung-mit-label" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{math}
+:label: bayes-theorem
+
+P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+```
+</pre></div>
+</div>
+<p>Referenz im Text: <code class="docutils literal notranslate"><span class="pre">{eq}`bayes-theorem`</span></code></p>
+<p>Ergebnis:</p>
+<div class="math notranslate nohighlight" id="equation-bayes-theorem">
+<span class="eqno">(1)<a class="headerlink" href="#equation-bayes-theorem" title="Link to this equation">#</a></span>\[P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="querverweise-zwischen-seiten">
+<h2>6. Querverweise zwischen Seiten<a class="headerlink" href="#querverweise-zwischen-seiten" title="Link to this heading">#</a></h2>
+<p>MyST unterstützt reichhaltige Informationen für das Verlinken
+zu anderen Dokumenten in gängigen Diensten wie Wikipedia oder
+Digital Object Identifier(DOI)-Links. Dies ermöglicht Vorschauen sowie einfache
+Einbindung von Zitationen.</p>
+<section id="verweis-auf-andere-kapitel-dieses-buchs">
+<h3>Verweis auf andere Kapitel dieses Buchs<a class="headerlink" href="#verweis-auf-andere-kapitel-dieses-buchs" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Siehe {doc}`commonmark` für die Grundlagen.
+Weiter mit {doc}`jupyterbook` für den Build-Prozess.
+</pre></div>
+</div>
+<p>Ergebnis:</p>
+<p>Siehe <a class="reference internal" href="commonmark.html"><span class="doc">CommonMark &amp; GitHub-Flavored Markdown</span></a> für die Grundlagen.
+Weiter mit <a class="reference internal" href="jupyterbook.html"><span class="doc">Jupyter Book</span></a> für den Build-Prozess.</p>
+</section>
+<section id="verweis-auf-ein-label">
+<h3>Verweis auf ein Label<a class="headerlink" href="#verweis-auf-ein-label" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>(mein-abschnitt)=
+<span class="gu">## Mein Abschnitt</span>
+
+... später im Text ...
+
+Siehe {ref}`mein-abschnitt`.
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="zitationen">
+<h2>7. Zitationen<a class="headerlink" href="#zitationen" title="Link to this heading">#</a></h2>
+<p>Wenn eine lokale Zitationsliste als BibTeX-Datei (*.bib) vorhanden
+ist, können die Schlüssel mit einer an LaTeX angelehnten Syntax
+referenziert werden: <code class="docutils literal notranslate"><span class="pre">{cite:p}</span></code> erzeugt eine Klammer-Zitation,
+<code class="docutils literal notranslate"><span class="pre">{cite:t}</span></code> eine textuelle Zitation. Die Zitationen erscheinen
+inline und erzeugen automatisch einen Literaturabschnitt am Ende der Seite.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Wie in {cite:p}`jupyterbook2021` beschrieben ...
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="frontmatter-metadaten-fur-wissenschaftliche-artikel">
+<h2>8. Frontmatter: Metadaten für wissenschaftliche Artikel<a class="headerlink" href="#frontmatter-metadaten-fur-wissenschaftliche-artikel" title="Link to this heading">#</a></h2>
+<p>Frontmatter erlaubt es, Metadaten über eine Seite anzugeben,
+einschließlich Titel, Thumbnail, Autoren und
+wissenschaftliche Identifikatoren wie DOI.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mein wissenschaftlicher Artikel</span>
+<span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2025-01-15</span>
+<span class="nt">authors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Max Mustermann</span>
+<span class="w">    </span><span class="nt">affiliations</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HAW Landshut</span>
+<span class="nt">doi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.1234/beispiel</span>
+<span class="nn">---</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="myst-markdown-vs-github-flavored-markdown-gfm">
+<h2>9. MyST Markdown  vs. GitHub-Flavored Markdown (GFM)<a class="headerlink" href="#myst-markdown-vs-github-flavored-markdown-gfm" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>GFM</p></th>
+<th class="head"><p>MyST</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Tabellen</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>Codeblöcke</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>Mathematik (LaTeX)</p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>Direktiven</p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>Rollen</p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>Querverweise</p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>Zitationen (BibTeX)</p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frontmatter/Metadaten</p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>Nummerierte Gleichungen</p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="verbindung-zu-anderen-kapiteln">
+<h2>Verbindung zu anderen Kapiteln<a class="headerlink" href="#verbindung-zu-anderen-kapiteln" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Navigation im Buch</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="commonmark.html"><span class="doc">CommonMark &amp; GitHub-Flavored Markdown</span></a>  Die Basis, auf der MyST aufbaut</p></li>
+<li><p><a class="reference internal" href="jupyterbook.html"><span class="doc">Jupyter Book</span></a>  Nutzt MyST als primäre Eingabesprache</p></li>
+<li><p><a class="reference internal" href="sphinx.html"><span class="doc">Sphinx</span></a>  Verarbeitet den MyST-AST als Build-Backend</p></li>
+<li><p><a class="reference internal" href="demo.html"><span class="doc">Demo</span></a>  Praktische MyST-Beispiele zum Ausprobieren</p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="quellen-weiterfuhrende-literatur">
+<h2>Quellen &amp; Weiterführende Literatur<a class="headerlink" href="#quellen-weiterfuhrende-literatur" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ressource</p></th>
+<th class="head"><p>Beschreibung</p></th>
+<th class="head"><p>Link</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MyST Dokumentation</p></td>
+<td><p>Offizielle Dokumentation</p></td>
+<td><p><a class="reference external" href="https://mystmd.org/guide">mystmd.org/guide</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>MyST Spezifikation</p></td>
+<td><p>Formelle Spezifikation</p></td>
+<td><p><a class="reference external" href="https://mystmd.org/spec">mystmd.org/spec</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Jupyter Book MyST</p></td>
+<td><p>MyST in Jupyter Book</p></td>
+<td><p><a class="reference external" href="https://jupyterbook.org/stable/authoring/mystmd/">jupyterbook.org</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>MyST Math</p></td>
+<td><p>Mathematik in MyST</p></td>
+<td><p><a class="reference external" href="https://mystmd.org/guide/math">mystmd.org/guide/math</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Executable Books Blog</p></td>
+<td><p>MyST wird Teil von Jupyter</p></td>
+<td><p><a class="reference external" href="https://executablebooks.org/en/latest/blog/2024-05-20-jupyter-book-myst/">executablebooks.org</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>SciPy Proceedings 2024</p></td>
+<td><p>MyST in der Wissenschaft</p></td>
+<td><p><a class="reference external" href="https://proceedings.scipy.org/articles/NKVC9349">proceedings.scipy.org</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="jupyterbook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Jupyter Book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="sphinx.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Sphinx</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-myst-markdown">1. Was ist MyST Markdown?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-im-okosystem">2. MyST im Ökosystem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direktiven-block-level-erweiterungen">3. Direktiven: Block-Level-Erweiterungen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hinweisboxen">3.1 Hinweisboxen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abbildungen-mit-beschriftung">3.2 Abbildungen mit Beschriftung</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rollen-inline-erweiterungen">4. Rollen: Inline-Erweiterungen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wichtige-rollen-im-uberblick">Wichtige Rollen im Überblick</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematische-formeln">5. Mathematische Formeln</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-mathematik">5.1 Inline-Mathematik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gleichungsblocke">5.2 Gleichungsblöcke</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nummerierte-gleichung-mit-label">5.3 Nummerierte Gleichung mit Label</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#querverweise-zwischen-seiten">6. Querverweise zwischen Seiten</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verweis-auf-andere-kapitel-dieses-buchs">Verweis auf andere Kapitel dieses Buchs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verweis-auf-ein-label">Verweis auf ein Label</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zitationen">7. Zitationen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frontmatter-metadaten-fur-wissenschaftliche-artikel">8. Frontmatter: Metadaten für wissenschaftliche Artikel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-markdown-vs-github-flavored-markdown-gfm">9. MyST Markdown  vs. GitHub-Flavored Markdown (GFM)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verbindung-zu-anderen-kapiteln">Verbindung zu anderen Kapiteln</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quellen-weiterfuhrende-literatur">Quellen &amp; Weiterführende Literatur</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Steve Tekam
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

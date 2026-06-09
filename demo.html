@@ -1,0 +1,911 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Praxisbeispiele &#8212; Das Executable Book Ökosystem</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'demo';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="GitHub-Flavored Markdown (GFM)" href="gfm.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/mylogo.png" class="logo__image only-light" alt="Das Executable Book Ökosystem - Home"/>
+    <script>document.write(`<img src="_static/mylogo.png" class="logo__image only-dark" alt="Das Executable Book Ökosystem - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Das Executable Book Ökosystem
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="commonmark.html"><strong>CommonMark</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="gfm.html"><strong>GitHub-Flavored Markdown (GFM)</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Praxisbeispiele</strong></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdemo.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/demo.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Praxisbeispiele</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#der-vollstandige-workflow"><strong>1. Der vollständige Workflow</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-verzeichnisstruktur-dieses-buchs"><strong>Die Verzeichnisstruktur dieses Buchs</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-befehle-im-uberblick"><strong>Build-Befehle im Überblick</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commonmark-syntax-live-demo"><strong>2. CommonMark Syntax: Live Demo</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uberschriften"><strong>Überschriften</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#textformatierung"><strong>Textformatierung</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#listen"><strong>Listen</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blockzitat"><strong>Blockzitat</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codeblock"><strong>Codeblock</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#links-und-bilder"><strong>Links und Bilder</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gfm-erweiterungen-live-demo"><strong>3. GFM Erweiterungen: Live Demo</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabelle"><strong>Tabelle</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-liste"><strong>Task-Liste</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strikethrough-durchstreichen"><strong>Strikethrough: Durchstreichen</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-highlighting-syntax-im-terminal"><strong>Syntax-Highlighting: Syntax im Terminal</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-admonition-hinweisboxen"><strong>4. MyST Admonition: Hinweisboxen</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#querverweise-zwischen-kapiteln"><strong>5. Querverweise zwischen Kapiteln</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung"><strong>Zusammenfassung</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verbindung-zu-anderen-kapiteln"><strong>Verbindung zu anderen Kapiteln</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quellen-weiterfuhrende-literatur"><strong>Quellen &amp; Weiterführende Literatur</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="praxisbeispiele">
+<h1><strong>Praxisbeispiele</strong><a class="headerlink" href="#praxisbeispiele" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>CommonMark &amp; GFM live erleben</strong></p>
+<p>Diese Seite demonstriert den gesamten Workflow von der ersten
+Markdown-Datei bis zur fertigen Website. Alle Beispiele sind
+direkt in diesem Buch sichtbar und nachvollziehbar.</p>
+</div>
+<hr class="docutils" />
+<section id="der-vollstandige-workflow">
+<h2><strong>1. Der vollständige Workflow</strong><a class="headerlink" href="#der-vollstandige-workflow" title="Link to this heading">#</a></h2>
+<p>So entsteht dieses Buch Schritt für Schritt:</p>
+<ol class="arabic simple">
+<li><p>Markdown-Dateien schreiben</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> Struktur definieren</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> Buch konfigurieren</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span></code> Jupiter Book bauen</p></li>
+<li><p>Fertige HTML-Webseite in <code class="docutils literal notranslate"><span class="pre">build/html/</span></code></p></li>
+</ol>
+<section id="die-verzeichnisstruktur-dieses-buchs">
+<h3><strong>Die Verzeichnisstruktur dieses Buchs</strong><a class="headerlink" href="#die-verzeichnisstruktur-dieses-buchs" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> &lt;- Titel, Autor, Logo</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>    &lt;- Inhaltsverzeichnis</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intro.md</span></code>    &lt;- Startseite</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonmark.md</span></code> &lt;- Kapitel 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gfm.md</span></code>        &lt;- Kapitel 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">demo.md</span></code>       &lt;- Seite für Praxisbeispiele</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_buils/</span></code>       &lt;- Book wird gebaut</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html/</span></code>         &lt;- HTML Datei</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index.html</span></code>    &lt;- Fertige Webseite</p></li>
+</ol>
+</section>
+<section id="build-befehle-im-uberblick">
+<h3><strong>Build-Befehle im Überblick</strong><a class="headerlink" href="#build-befehle-im-uberblick" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># **Neues Buch erstellen**</span>
+jb<span class="w"> </span>create<span class="w"> </span>mein-buch
+
+<span class="c1"># **HTML bauen**</span>
+jb<span class="w"> </span>build<span class="w"> </span>.
+
+<span class="c1"># **Build-Verzeichnis leeren**</span>
+jb<span class="w"> </span>clean<span class="w"> </span>.
+
+<span class="c1"># **PDF bauen**</span>
+jb<span class="w"> </span>build<span class="w"> </span>.<span class="w"> </span>--builder<span class="w"> </span>pdflatex
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="commonmark-syntax-live-demo">
+<h2><strong>2. CommonMark Syntax: Live Demo</strong><a class="headerlink" href="#commonmark-syntax-live-demo" title="Link to this heading">#</a></h2>
+<section id="uberschriften">
+<h3><strong>Überschriften</strong><a class="headerlink" href="#uberschriften" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># H1 – Haupttitel</span>
+<span class="gu">## H2 – Abschnitt</span>
+<span class="gu">### H3 – Unterabschnitt</span>
+<span class="gu">#### H4 – Unterunterabschnitt</span>
+</pre></div>
+</div>
+<p>Ergebnis direkt auf dieser Seite – die Überschriften oben
+sind alle in CommonMark geschrieben!</p>
+</section>
+<hr class="docutils" />
+<section id="textformatierung">
+<h3><strong>Textformatierung</strong><a class="headerlink" href="#textformatierung" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gs">**fetter Text**</span>
+<span class="ge">*kursiver Text*</span>
+***fett und kursiv***
+<span class="sb">`inline Code`</span>
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<p><strong>fetter Text</strong> – <em>kursiver Text</em> – <em><strong>fett und kursiv</strong></em> – <code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">Code</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="listen">
+<h3><strong>Listen</strong><a class="headerlink" href="#listen" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">-</span><span class="w"> </span>Erster Punkt
+<span class="k">-</span><span class="w"> </span>Zweiter Punkt
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Eingerückter Unterpunkt
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Noch ein Unterpunkt
+<span class="k">-</span><span class="w"> </span>Dritter Punkt
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<ul class="simple">
+<li><p>Erster Punkt</p></li>
+<li><p>Zweiter Punkt</p>
+<ul>
+<li><p>Eingerückter Unterpunkt</p></li>
+<li><p>Noch ein Unterpunkt</p></li>
+</ul>
+</li>
+<li><p>Dritter Punkt</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="blockzitat">
+<h3><strong>Blockzitat</strong><a class="headerlink" href="#blockzitat" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">&gt; </span><span class="ge">CommonMark ist die präzise, eindeutige Spezifikation von Markdown.</span>
+<span class="k">&gt; </span><span class="ge">Sie bildet das Fundament des gesamten Executable Book Ökosystems.</span>
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<blockquote>
+<div><p>CommonMark ist die präzise, eindeutige Spezifikation von Markdown.
+Sie bildet das Fundament des gesamten Executable Book Ökosystems.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="codeblock">
+<h3><strong>Codeblock</strong><a class="headerlink" href="#codeblock" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="sb">```python</span>
+<span class="c1"># **Ein einfaches Python-Beispiel**</span>
+<span class="n">namen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CommonMark&quot;</span><span class="p">,</span> <span class="s2">&quot;GFM&quot;</span><span class="p">,</span> <span class="s2">&quot;MyST&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupyter Book&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">namen</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Werkzeug: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># **Ein einfaches Python-Beispiel**</span>
+<span class="n">namen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CommonMark&quot;</span><span class="p">,</span> <span class="s2">&quot;GFM&quot;</span><span class="p">,</span> <span class="s2">&quot;MyST&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupyter Book&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">namen</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Werkzeug: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="links-und-bilder">
+<h3><strong>Links und Bilder</strong><a class="headerlink" href="#links-und-bilder" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[<span class="nt">CommonMark Spezifikation</span>](<span class="na">https://commonmark.org</span>)
+[<span class="nt">GFM Spezifikation</span>](<span class="na">https://github.github.com/gfm/</span>)
+[<span class="nt">Executable Books Projekt</span>](<span class="na">https://executablebooks.org</span>)
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://commonmark.org">CommonMark Spezifikation</a></p></li>
+<li><p><a class="reference external" href="https://github.github.com/gfm/">GFM Spezifikation</a></p></li>
+<li><p><a class="reference external" href="https://executablebooks.org">Executable Books Projekt</a></p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="gfm-erweiterungen-live-demo">
+<h2><strong>3. GFM Erweiterungen: Live Demo</strong><a class="headerlink" href="#gfm-erweiterungen-live-demo" title="Link to this heading">#</a></h2>
+<section id="tabelle">
+<h3><strong>Tabelle</strong><a class="headerlink" href="#tabelle" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>| <span class="gs">**Standard**</span>     | <span class="gs">**Erscheinungsjahr**</span> | <span class="gs">**Basis**</span>       |
+|:-------------|:----------------:|------------:|
+| Markdown     | 2004             | –           |
+| CommonMark   | 2014             | Markdown    |
+| GFM          | 2017             | CommonMark  |
+| MyST         | 2020             | CommonMark  |
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p><strong>Standard</strong></p></th>
+<th class="head text-center"><p><strong>Erscheinungsjahr</strong></p></th>
+<th class="head text-right"><p><strong>Basis</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Markdown</p></td>
+<td class="text-center"><p>2004</p></td>
+<td class="text-right"><p>–</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>CommonMark</p></td>
+<td class="text-center"><p>2014</p></td>
+<td class="text-right"><p>Markdown</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>GFM</p></td>
+<td class="text-center"><p>2017</p></td>
+<td class="text-right"><p>CommonMark</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>MyST</p></td>
+<td class="text-center"><p>2020</p></td>
+<td class="text-right"><p>CommonMark</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="task-liste">
+<h3><strong>Task-Liste</strong><a class="headerlink" href="#task-liste" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">- [x]</span> Markdown-Grundlagen verstehen
+<span class="k">- [x]</span> CommonMark Spezifikation kennen
+<span class="k">- [x]</span> GFM Erweiterungen beherrschen
+<span class="k">- [ ]</span> Eigenes Jupyter Book veröffentlichen
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Markdown-Grundlagen verstehen</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> CommonMark Spezifikation kennen</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> GFM Erweiterungen beherrschen</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Eigenes Jupyter Book veröffentlichen</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="strikethrough-durchstreichen">
+<h3><strong>Strikethrough: Durchstreichen</strong><a class="headerlink" href="#strikethrough-durchstreichen" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gd">~~Markdown hat keine eindeutige Spezifikation~~</span> CommonMark löst dieses Problem.
+<span class="gd">~~GFM ist nur für GitHub~~</span> GFM wird auf vielen Plattformen verwendet.
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<p>~~Markdown hat keine eindeutige Spezifikation~~ CommonMark löst dieses Problem.</p>
+<p>~~GFM ist nur für GitHub~~ GFM wird auf vielen Plattformen verwendet.</p>
+</section>
+<hr class="docutils" />
+<section id="syntax-highlighting-syntax-im-terminal">
+<h3><strong>Syntax-Highlighting: Syntax im Terminal</strong><a class="headerlink" href="#syntax-highlighting-syntax-im-terminal" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="sb">```bash</span>
+<span class="c1"># **System aktualisieren**</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+
+<span class="c1"># **Jupyter Book bauen**</span>
+<span class="nb">cd</span><span class="w"> </span>~/c/executable-book-oekosystem
+jb<span class="w"> </span>build<span class="w"> </span>.
+<span class="sb">```</span>
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># **System aktualisieren**</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+
+<span class="c1"># **Jupyter Book bauen**</span>
+<span class="nb">cd</span><span class="w"> </span>~/c/executable-book-oekosystem
+jb<span class="w"> </span>build<span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="myst-admonition-hinweisboxen">
+<h2><strong>4. MyST Admonition: Hinweisboxen</strong><a class="headerlink" href="#myst-admonition-hinweisboxen" title="Link to this heading">#</a></h2>
+<p>MyST erweitert GFM um farbige Hinweisboxen:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{note}
+Das ist ein blauer Hinweis.
+<span class="sb">```</span>
+
+<span class="sb">```{tip}</span>
+<span class="sb">Das ist ein grüner Tipp.</span>
+<span class="sb">```</span>
+
+```{warning}
+Das ist eine orange Warnung.
+<span class="sb">```</span>
+
+<span class="sb">```{important}</span>
+<span class="sb">Das ist eine lila wichtige Information.</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Das ist ein blauer Hinweis.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Das ist ein grüner Tipp.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Das ist eine orange Warnung.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Das ist eine lila wichtige Information.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="querverweise-zwischen-kapiteln">
+<h2><strong>5. Querverweise zwischen Kapiteln</strong><a class="headerlink" href="#querverweise-zwischen-kapiteln" title="Link to this heading">#</a></h2>
+<p>Ein wesentliches Feature von Jupyter Book ist die Navigation
+zwischen Kapiteln direkt aus dem Text heraus:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Zurück zu {doc}`commonmark` für die Grundlagen.
+Weiter zu {doc}`gfm` für die Erweiterungen.
+</pre></div>
+</div>
+<p><strong>Ergebnis:</strong></p>
+<p>Zurück zu <a class="reference internal" href="commonmark.html"><span class="doc">CommonMark</span></a> für die Grundlagen.
+Weiter zu <a class="reference internal" href="gfm.html"><span class="doc">GitHub-Flavored Markdown (GFM)</span></a> für die Erweiterungen.</p>
+</section>
+<hr class="docutils" />
+<section id="zusammenfassung">
+<h2><strong>Zusammenfassung</strong><a class="headerlink" href="#zusammenfassung" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Was wir gelernt haben</strong></p>
+<ul class="simple">
+<li><p><strong>CommonMark</strong> liefert die eindeutige, standardisierte Basis</p></li>
+<li><p><strong>GFM</strong> erweitert CommonMark um Tabellen, Task-Listen,
+Strikethrough und Syntax-Highlighting</p></li>
+<li><p><strong>Jupyter Book</strong> baut aus diesen Dateien eine professionelle Website</p></li>
+<li><p>Der Workflow ist einfach: Schreiben -&gt; <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span></code> -&gt; Fertig</p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="verbindung-zu-anderen-kapiteln">
+<h2><strong>Verbindung zu anderen Kapiteln</strong><a class="headerlink" href="#verbindung-zu-anderen-kapiteln" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Navigation im Buch</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="commonmark.html"><span class="doc">CommonMark</span></a>  Der offizielle Markdown-Standard</p></li>
+<li><p><a class="reference internal" href="gfm.html"><span class="doc">GitHub-Flavored Markdown (GFM)</span></a>  GitHub-Flavored Markdown im Detail</p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="quellen-weiterfuhrende-literatur">
+<h2><strong>Quellen &amp; Weiterführende Literatur</strong><a class="headerlink" href="#quellen-weiterfuhrende-literatur" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Ressource</strong></p></th>
+<th class="head"><p><strong>Beschreibung</strong></p></th>
+<th class="head"><p><strong>Link</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CommonMark Spec</p></td>
+<td><p>Offizielle Spezifikation</p></td>
+<td><p><a class="reference external" href="https://commonmark.org">commonmark.org</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>GFM Spezifikation</p></td>
+<td><p>GitHub Flavored Markdown</p></td>
+<td><p><a class="reference external" href="https://github.github.com/gfm/">github.github.com/gfm</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Jupyter Book Doku</p></td>
+<td><p>Build-Prozess</p></td>
+<td><p><a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>MyST Markdown</p></td>
+<td><p>Direktiven &amp; Rollen</p></td>
+<td><p><a class="reference external" href="https://mystmd.org">mystmd.org</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Executable Books</p></td>
+<td><p>Das Ökosystem</p></td>
+<td><p><a class="reference external" href="https://executablebooks.org">executablebooks.org</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="gfm.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>GitHub-Flavored Markdown (GFM)</strong></p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#der-vollstandige-workflow"><strong>1. Der vollständige Workflow</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-verzeichnisstruktur-dieses-buchs"><strong>Die Verzeichnisstruktur dieses Buchs</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-befehle-im-uberblick"><strong>Build-Befehle im Überblick</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commonmark-syntax-live-demo"><strong>2. CommonMark Syntax: Live Demo</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uberschriften"><strong>Überschriften</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#textformatierung"><strong>Textformatierung</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#listen"><strong>Listen</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blockzitat"><strong>Blockzitat</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codeblock"><strong>Codeblock</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#links-und-bilder"><strong>Links und Bilder</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gfm-erweiterungen-live-demo"><strong>3. GFM Erweiterungen: Live Demo</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabelle"><strong>Tabelle</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-liste"><strong>Task-Liste</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strikethrough-durchstreichen"><strong>Strikethrough: Durchstreichen</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-highlighting-syntax-im-terminal"><strong>Syntax-Highlighting: Syntax im Terminal</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-admonition-hinweisboxen"><strong>4. MyST Admonition: Hinweisboxen</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#querverweise-zwischen-kapiteln"><strong>5. Querverweise zwischen Kapiteln</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung"><strong>Zusammenfassung</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verbindung-zu-anderen-kapiteln"><strong>Verbindung zu anderen Kapiteln</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quellen-weiterfuhrende-literatur"><strong>Quellen &amp; Weiterführende Literatur</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Steve Tekam
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
