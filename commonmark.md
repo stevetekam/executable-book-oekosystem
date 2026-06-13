@@ -3,7 +3,7 @@
 :::{note}
 **Der offizielle Markdown-Standard**
 
-CommonMark ist die präzise, eindeutige Spezifikation von Markdown –
+CommonMark ist die präzise, eindeutige Spezifikation von Markdown und
 das Fundament, auf dem GitHub-Flavored Markdown, MyST und das gesamte
 Executable Book Ökosystem aufbauen.
 :::
@@ -16,7 +16,7 @@ Markdown wurde 2004 von **John Gruber** in Zusammenarbeit mit **Aaron Swartz**
 entwickelt. Die Idee war einfach: lesbarer Klartext, der sich automatisch
 in HTML übersetzen lässt.
 
-Im Jahr 2008 übernahm GitHub Markdown für README-Dateien – ein entscheidender
+Im Jahr 2008 übernahm GitHub Markdown für README-Dateien. Das war  ein entscheidender
 Schritt für die weltweite Verbreitung.
 
 :::{tip}
@@ -58,7 +58,7 @@ Zu den Initiatoren gehörten:
 | Vertreter von Stack Exchange | – |
 
 Das Projekt hieß zunächst **„StandardMark"**. John Gruber lehnte diesen
-Namen ab – woraufhin es in **CommonMark** umbenannt wurde.
+Namen ab, woraufhin es in **CommonMark** umbenannt wurde.
 
 :::{important}
 CommonMark bietet eine eindeutige Spezifikation mit über
@@ -70,7 +70,7 @@ identische Ergebnisse liefert.
 - Spezifikation: [commonmark.org](https://commonmark.org)
 - Interaktives Tutorial: [commonmark.org/help/tutorial](https://commonmark.org/help/tutorial/)
 - Live-Demo (Dingus): [spec.commonmark.org/dingus](https://spec.commonmark.org/dingus/)
-- Babelmark – Vergleich aller Implementierungen: [babelmark.github.io](https://babelmark.github.io)
+- Babelmark für  Vergleich aller Implementierungen: [babelmark.github.io](https://babelmark.github.io)
 
 ---
 
@@ -187,3 +187,6 @@ GitHub, GitLab, Jupyter, Pandoc, MyST, Sphinx und viele mehr.
 | Wikipedia: Markdown | Geschichte und Überblick | [en.wikipedia.org/wiki/Markdown](https://en.wikipedia.org/wiki/Markdown) |
 | History of Markdown | Detaillierte Geschichte | [hackmd.io](https://hackmd.io/blog/2026/02/11/markdown-history) |
 | Daring Fireball | Originale Markdown-Beschreibung | [daringfireball.net](https://daringfireball.net/projects/markdown/) |
+
+```{tableofcontents}
+```
