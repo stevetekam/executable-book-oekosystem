@@ -20,15 +20,15 @@ So entsteht dieses Buch Schritt für Schritt:
 4. `jb build .` Jupiter Book bauen
 5. Fertige HTML-Webseite in `build/html/`
 
-### **Die Verzeichnisstruktur dieses Buchs**
+### **Die Verzeichnisstruktur meines Buchs**
 
-1. `_config.yml` <- Titel, Autor, Logo
-2. `_toc.yml`    <- Inhaltsverzeichnis
-3. `intro.md`    <- Startseite
+1. `_config.yml`   <- Titel, Autor, Logo
+2. `_toc.yml`      <- Inhaltsverzeichnis
+3. `intro.md`      <- Startseite
 4. `commonmark.md` <- Kapitel 1
 5. `gfm.md`        <- Kapitel 2
 6. `demo.md`       <- Seite für Praxisbeispiele 
-7. `_buils/`       <- Book wird gebaut
+7. `_build/`       <- Book wird gebaut
 8. `html/`         <- HTML Datei
 9. `index.html`    <- Fertige Webseite
 
@@ -50,7 +50,7 @@ jb build . --builder pdflatex
 
 ---
 
-## **2. CommonMark Syntax: Live Demo**
+## **2. CommonMark Syntax**
 
 ### **Überschriften**
 
@@ -61,9 +61,6 @@ jb build . --builder pdflatex
 #### H4 – Unterunterabschnitt
 ````
 
-Ergebnis direkt auf dieser Seite – die Überschriften oben
-sind alle in CommonMark geschrieben!
-
 ---
 
 ### **Textformatierung**
@@ -72,12 +69,12 @@ sind alle in CommonMark geschrieben!
 **fetter Text**
 *kursiver Text*
 ***fett und kursiv***
-`inline Code`
+`Zeile von Code`
 ````
 
 **Ergebnis:**
 
-**fetter Text** – *kursiver Text* – ***fett und kursiv*** – `inline Code`
+**fetter Text**  *kursiver Text*  ***fett und kursiv***  `Zeile von Code`
 
 ---
 
@@ -155,22 +152,22 @@ for name in namen:
 
 ---
 
-## **3. GFM Erweiterungen: Live Demo**
+## **3. GFM Erweiterungen**
 
 ### **Tabelle**
 
 ````markdown
-| **Standard**     | **Erscheinungsjahr** | **Basis**       |
-|:-------------|:----------------:|------------:|
-| Markdown     | 2004             | –           |
-| CommonMark   | 2014             | Markdown    |
-| GFM          | 2017             | CommonMark  |
-| MyST         | 2020             | CommonMark  |
+| **Standard** | **Erscheinungsjahr** | **Basis**   |
+|:-------------|:--------------------:|------------:|
+| Markdown     | 2004                 | –           |
+| CommonMark   | 2014                 | Markdown    |
+| GFM          | 2017                 | CommonMark  |
+| MyST         | 2020                 | CommonMark  |
 ````
 
 **Ergebnis:**
 
-| **Standard**     | **Erscheinungsjahr** | **Basis**       |
+| **Standard** | **Erscheinungsjahr** | **Basis**       |
 |:-------------|:----------------:|------------:|
 | Markdown     | 2004             | –           |
 | CommonMark   | 2014             | Markdown    |
@@ -197,7 +194,7 @@ for name in namen:
 
 ---
 
-### **Strikethrough: Durchstreichen**
+### **Durchstreichen**
 
 ````markdown
 ~~Markdown hat keine eindeutige Spezifikation~~ CommonMark löst dieses Problem.
@@ -212,7 +209,7 @@ for name in namen:
 
 ---
 
-### **Syntax-Highlighting: Syntax im Terminal**
+### **Syntax im Terminal**
 
 ````markdown
 ```bash
@@ -238,9 +235,9 @@ jb build .
 
 ---
 
-## **4. MyST Admonition: Hinweisboxen**
+## **4.Hinweisboxen**
 
-MyST erweitert GFM um farbige Hinweisboxen:
+In GFM ist möglich Hinweisboxen zu integrieren:
 
 ````markdown
 ```{note}
@@ -280,10 +277,10 @@ Das ist eine lila wichtige Information.
 
 ---
 
-## **5. Querverweise zwischen Kapiteln**
+## **5. Navigation zwischen Kapiteln**
 
-Ein wesentliches Feature von Jupyter Book ist die Navigation
-zwischen Kapiteln direkt aus dem Text heraus:
+Die Navigation
+zwischen Kapiteln ist wichtig, da es einen schnellen Zugriff zu anderen Kapitel ermöglicht.
 
 ````markdown
 Zurück zu {doc}`commonmark` für die Grundlagen.
@@ -304,9 +301,9 @@ Weiter zu {doc}`gfm` für die Erweiterungen.
 
 - **CommonMark** liefert die eindeutige, standardisierte Basis
 - **GFM** erweitert CommonMark um Tabellen, Task-Listen,
-  Strikethrough und Syntax-Highlighting
+  Durchstreichen und Syntax in Terminal 
 - **Jupyter Book** baut aus diesen Dateien eine professionelle Website
-- Der Workflow ist einfach: Schreiben -> `jb build .` -> Fertig
+- Einfach im Terminal schreiben -> `jb build .` -> Fertig
 :::
 
 ---
@@ -326,8 +323,10 @@ Weiter zu {doc}`gfm` für die Erweiterungen.
 
 | **Ressource** | **Beschreibung** | **Link** |
 |-----------|--------------|------|
-| CommonMark Spec | Offizielle Spezifikation | [commonmark.org](https://commonmark.org) |
+| CommonMark  | Offizielle Spezifikation | [commonmark.org](https://commonmark.org) |
 | GFM Spezifikation | GitHub Flavored Markdown | [github.github.com/gfm](https://github.github.com/gfm/) |
-| Jupyter Book Doku | Build-Prozess | [jupyterbook.org](https://jupyterbook.org) |
-| MyST Markdown | Direktiven & Rollen | [mystmd.org](https://mystmd.org) |
 | Executable Books | Das Ökosystem | [executablebooks.org](https://executablebooks.org) |
+
+
+```{tableofcontents}
+```

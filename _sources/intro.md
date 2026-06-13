@@ -1,20 +1,15 @@
 # **Das Executable Book Ökosystem**
 
 :::{note}
-**Von einfachem Markdown zu interaktiven, wissenschaftlichen Publikationen**
-
-Entdecken Sie ein modernes Open-Source-Ökosystem, das Dokumentation, Datenanalyse,
-Forschung und Softwareentwicklung in einer einzigen, reproduzierbaren
-Publikationspipeline vereint.
+In diesem Buch wird gelernt wie man von einfachem Markdown zu interaktiven und wissenschaftlichen Publikationen kommt
 :::
+
+**Das Ziel ist vor allem eine saubere Dokumentation für Datenanalyse,Forschung und Software zu produzieren**
 
 ---
 
-## **Willkommen**
-
 Wissenschaftliche Erkenntnisse entstehen heute nicht mehr ausschließlich in
-Textdokumenten. Sie entstehen in Notebooks, Code-Repositories, Datenpipelines
-und kollaborativen Entwicklungsumgebungen.
+Textdokumenten. Sie entstehen in Notebooks, Code-Repositories und kollaborativen Entwicklungsumgebungen.
 
 Die Herausforderung besteht darin, diese Inhalte nachvollziehbar, reproduzierbar
 und professionell zu veröffentlichen.
@@ -34,7 +29,7 @@ wissenschaftliches Publizieren im digitalen Zeitalter.
 ## **Warum Executable Books?**
 
 > Traditionelle Dokumente zeigen Ergebnisse.
-> **Executable Books zeigen den Weg dorthin.**
+> Executable Books zeigen den Weg dorthin
 
 Anstatt lediglich Grafiken, Tabellen oder Formeln zu präsentieren, können
 Leserinnen und Leser nachvollziehen:
@@ -51,17 +46,15 @@ Dadurch entstehen Publikationen, die nicht nur gelesen, sondern auch verstanden,
 
 ## **Was Sie in diesem Buch erwartet**
 
-📖 **CommonMark**
-Lernen Sie die Grundlagen des modernen Markdown-Standards kennen und verstehen Sie,
-warum er heute das Fundament unzähliger Dokumentations- und Publikationssysteme bildet.
+**CommonMark**
+Hier werden die Grundlagen des modernen Markdown-Standards kennengelernt und warum er heute das Fundament für saubere Dokumentation ist.
 
-🐙 **GitHub-Flavored Markdown (GFM)**
-Entdecken Sie die praktischen Erweiterungen von GitHub  Tabellen, Task-Listen,
-Strikethrough und mehr. Die GFM zum meistgenutzten Markdown-Dialekt der Welt gemacht haben.
+**GitHub-Flavored Markdown (GFM)**
+In diesem Teil wird die praktischen Erweiterungen von GitHub  Tabellen, Task-Listen, Durchstreichensfunktion und mehr.
 
-🧪 **Praxisbeispiele**
-Anhand konkreter Beispiele erleben Sie CommonMark und GFM live im Einsatz
-von der ersten Markdown-Datei bis zur fertigen Publikation.
+**Praxisbeispiele**
+Es wird konkrete Beispiele genannt wie CommonMark und GFM
+von der ersten Markdown-Datei bis zur fertigen Dokumentation eingesetzt werden.
 
 ---
 
@@ -76,18 +69,6 @@ Dieses Buch richtet sich an:
 - Technische Redakteure
 - Alle, die reproduzierbare Inhalte veröffentlichen möchten
 
-Vorkenntnisse sind hilfreich, aber nicht zwingend erforderlich. Die Kapitel bauen
-logisch aufeinander auf und führen Schritt für Schritt in die Konzepte ein.
-
----
-
-## **Bereit?**
-
-Sie beginnen eine Reise durch ein modernes Publikationsökosystem, in dem Text, Code
-und Wissen nicht getrennt voneinander existieren, sondern gemeinsam eine neue Form
-wissenschaftlicher Kommunikation ermöglichen.
-
-**Legen wir los.**
 
 ```{tableofcontents}
 ```

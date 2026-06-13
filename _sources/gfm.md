@@ -240,3 +240,6 @@ Dokumentations- und Publikationsplattform.
 | Wikipedia: Markdown | Geschichte & Überblick | [en.wikipedia.org/wiki/Markdown](https://en.wikipedia.org/wiki/Markdown) |
 | History of Markdown | Von 2004 bis heute | [web2md.org](https://web2md.org/blog/history-of-markdown) |
 | mdkit.io: GFM | GFM erklärt | [mdkit.io](https://mdkit.io/blog/github-flavored-markdown) |
+
+```{tableofcontents}
+```
